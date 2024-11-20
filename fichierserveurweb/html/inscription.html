@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Doudounes Style</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Doudounes Style</div>
+        <nav>
+            <a href="/html/index.html">Accueil</a>
+            <a href="/html/catalogue.html">Catalogue</a>
+            <a href="/html/conexion.html">Connexion</a>
+            <a href="/html/inscription.html">Inscription</a>
+            <a href="/html/panier.html">Panier</a>
+        </nav>
+    </header>
+    <main>
+        <section class="inscription-section">
+            <h1>Créer un compte</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="full-name">Nom complet</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Votre nom complet" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="Votre mot de passe" required autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmez le mot de passe</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmez votre mot de passe" required autocomplete="new-password">
+                </div>
+                <button type="submit" class="btn-submit">S'inscrire</button>
+            </form>
+            <p>Déjà un compte ? <a href="/html/conexion.html">Connectez-vous ici</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doudounes Style. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

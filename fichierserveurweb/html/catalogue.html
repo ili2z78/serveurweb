@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Doudounes Style</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Doudounes Style</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="./">Catalogue</a>
+            <a href="/html/conexion.html">Connexion</a>
+            <a href="/html/inscription.html">Inscription</a>
+            <a href="/html/panier.html">Panier</a>
+        </nav>
+    </header>
+    <main>
+        <section class="catalogue">
+            <h1>Notre Catalogue</h1>
+            <div class="products">
+                <div class="product">
+                    <img src="/images/doudoune-en-nylon-oprah-bright-dark-night.jpg" alt="Doudoune 1">
+                    <h2>Doudoune Alpine</h2>
+                    <p>150€</p>
+                    <a href="/html/produit.html" class="btn">Voir</a>
+                </div>
+                <div class="product">
+                    <img src="/images/téléchargement (1).jpg" alt="Doudoune 2">
+                    <h2>Doudoune Urbain</h2>
+                    <p>120€</p>
+                    <a href="/html/produit.html" class="btn">Voir</a>
+                </div>
+                <div class="product">
+                    <img src="/images/téléchargement.jpg" alt="Doudoune 3">
+                    <h2>Doudoune Luxe</h2>
+                    <p>300€</p>
+                    <a href="/html/produit.html" class="btn">Voir</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doudounes Style. Tous droits réservés.</p>
+    </footer>
+    <script>s
+        document.querySelectorAll('.product').forEach(product => {
+            product.addEventListener('mouseenter', () => {
+                product.style.transform = 'scale(1.05)';
+                product.style.boxShadow = '0 6px 30px rgba(0, 0, 0, 0.1)';
+            });
+            
+            product.addEventListener('mouseleave', () => {
+                product.style.transform = 'scale(1)';
+                product.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+</body>
+</html>

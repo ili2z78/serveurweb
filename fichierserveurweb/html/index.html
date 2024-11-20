@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Doudounes Style</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Doudounes Style</div>
+        <nav>
+            <a href="/html/index.html">Accueil</a>
+            <a href="/html/catalogue.html">Catalogue</a>
+            <a href="/html/conexion.html">Connexion</a>
+            <a href="/html/inscription.html">Inscription</a>
+            <a href="/html/panier.html">Panier</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bienvenue sur Doudounes Style</h1>
+            <p>Découvrez les dernières tendances de doudounes pour tous les styles et toutes les saisons.</p>
+            <a href="/html/catalogue.html" class="btn">Voir le catalogue</a>
+        </section>
+
+        <section class="search-section">
+            <input type="text" placeholder="Recherchez une doudoune..." class="search-bar" id="search-input">
+            <button class="search-btn" id="search-btn">Rechercher</button>
+        </section>
+
+        <section class="animated-section" id="animated-section">
+            <h2>Nos doudounes vedettes</h2>
+            <p>Les doudounes les plus populaires de la saison.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Doudounes Style. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('.hero h1').fadeIn(1500);
+            $('.hero p').fadeIn(2000);
+            $('.btn').fadeIn(2500);
+        });
+
+        $('#search-input').on('focus', function() {
+            $(this).css('border-color', '#333');
+        }).on('blur', function() {
+            $(this).css('border-color', '#ccc');
+        });
+
+        $('#search-btn').on('click', function() {
+            var query = $('#search-input').val();
+            if(query.length > 0) {
+                alert('Vous recherchez: ' + query);
+            } else {
+                alert('Veuillez entrer un terme de recherche.');
+            }
+        });
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            var sectionOffset = $('#animated-section').offset().top;
+
+            if(scroll > sectionOffset - $(window).height() + 100) {
+                $('#animated-section').animate({
+                    opacity: 1,
+                    marginTop: '0px'
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
